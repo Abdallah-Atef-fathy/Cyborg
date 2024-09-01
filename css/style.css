@@ -1,0 +1,707 @@
+/* 
+--------------------
+Start Varibale
+--------------------
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: .4s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* Colors */
+    --white-color: #fff;
+    --secondry-color: #ec6090;
+    --secondryT-color: #e75e8d;
+    --main-color: #27292a;
+    --bac-color: #666;
+    --dar-color: #1f2122;
+    --bor-color: #353637;
+    --ye-color: yellow;
+    --bor2-color: #444;
+    --after-color: #3B566E;
+    --nav-color: #1e1e1e;
+    --whitedr-color: #f7f7f7;
+    --hover-color: #F99;
+    --a-color: #CCC;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.continar {
+    width: auto;
+    padding: 55px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: var(--main-color);
+    border-radius: 15px;
+}
+
+@media(max-width:560px) {
+    .continar {
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 20px;
+    }
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--dar-color);
+}
+
+/* 
+--------------------
+End Varibale
+--------------------
+*/
+
+/* 
+--------------------
+Start Nav
+--------------------
+*/
+nav {
+    width: auto;
+    height: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transform: translateX(-60rem);
+    transition: all 2s .2s ease;
+    z-index: 123;
+}
+
+nav .logo {
+    padding: 0px 20px;
+    border-right: 2px solid var(--main-color);
+    cursor: pointer;
+}
+
+nav .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+nav .search input {
+    width: 230px;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    padding: 0px 15px;
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+nav .search input:focus {
+    border: 1px solid #fff;
+}
+
+nav .search i {
+    color: #fff;
+    font-size: 18px;
+}
+
+nav .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    transition: all 2s 0s ease-in-out;
+}
+
+nav .links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .links ul li .active,
+nav .links ul li a:hover {
+    color: var(--secondry-color);
+}
+
+nav .links ul li a {
+    margin-left: 25px;
+    font-size: 16px;
+    color: #666;
+}
+
+nav .links li .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 50px;
+    gap: 20px;
+    border-radius: 25px;
+    background-color: var(--main-color);
+}
+
+nav .links li .profile:hover {
+    background-color: var(--secondry-color);
+    color: #fff;
+}
+
+nav .links li .profile img {
+    border-radius: 50%;
+}
+
+nav .menu {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Media */
+@media(max-width:500px) {
+    nav .logo img {
+        width: 120px;
+    }
+}
+
+@media(max-width:992px) {
+    nav {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 30px;
+        padding: 0px 30px;
+        background-color: #fff;
+    }
+
+    nav .menu {
+        color: var(--secondry-color);
+    }
+
+    nav .search {
+        display: none;
+    }
+
+    nav .links {
+        position: absolute;
+        transform: translateY(-20rem);
+        right: 20px;
+        text-align: center;
+        background-color: #fff;
+        width: 200px;
+        height: auto;
+        border-radius: 15px;
+        padding: 20px;
+        display: none;
+        transition: all 2s 0s ease-in-out;
+    }
+
+    nav .links ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10px;
+        margin-left: -50px;
+        gap: 30px;
+    }
+
+    nav .links ul li a {
+        font-size: 18px;
+    }
+
+    nav .menu {
+        display: block;
+    }
+
+    nav .links li .profile {
+        display: flex;
+        padding: 20px;
+    }
+}
+
+@media(max-width:1140px) {
+    nav .search input {
+        width: 200px;
+        height: 40px;
+    }
+
+    nav .links li .profile {
+        width: 130px;
+    }
+}
+
+/* 
+--------------------
+End Nav
+--------------------
+*/
+
+
+/* 
+--------------------
+Start Landing
+--------------------
+*/
+.landing-page {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.landing-page .continar .welcome {
+    width: 100%;
+    min-height: 380px;
+    padding: 40px 60px;
+    background-image: url(../images/banner-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 25px;
+    opacity: 0;
+    position: relative;
+    transform: translateY(130px);
+    transition: all 4s .2s ease;
+    overflow: hidden;
+}
+
+.landing-page .continar .welcome p {
+    margin-top: 50px;
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transform: translateX(-20rem);
+    transition: all 1s 1s ease-in-out;
+}
+
+.landing-page .continar .welcome h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+    transform: translateX(-40rem);
+    transition: all 1s 1.5s ease-in-out;
+}
+
+.landing-page .continar .welcome h1 span {
+    color: var(--secondry-color);
+}
+
+.landing-page .continar .welcome button {
+    width: 150px;
+    height: 45px;
+    border-radius: 25px;
+    background-color: var(--secondry-color) !important;
+    border: none;
+    outline: none;
+    margin-bottom: 50px;
+    transform: translateX(-18rem);
+    transition: all 1s 2s ease-in-out;
+}
+
+.landing-page .continar .welcome button:hover {
+    background-color: #fff !important;
+    transition: all .4s 0s;
+
+    a {
+        color: var(--secondry-color) !important;
+        transition: all .4s 0s;
+    }
+}
+
+.landing-page .continar .welcome button a {
+    color: #fff !important;
+    letter-spacing: 2px;
+}
+
+@media(max-width:768px) {
+    .landing-page .continar .welcome {
+        text-align: center;
+    }
+
+    .landing-page .continar .welcome h1 {
+        font-size: 30px;
+    }
+
+    .landing-page .continar .welcome p {
+        font-size: 18px;
+    }
+}
+
+/* Start Boxes */
+.landing-page .continar .most-publar {
+    background-color: var(--dar-color);
+    border-radius: 25px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    padding: 50px 30px;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.landing-page .continar .most-publar .title {
+    overflow: hidden;
+}
+
+.landing-page .continar .most-publar .title h1 {
+    margin-bottom: 30px;
+    color: var(--white-color);
+    font-size: 40px;
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: bold;
+    transform: translateX(-31rem);
+    transition: all 1s 2.5s ease-in-out;
+
+    span {
+        color: var(--secondry-color);
+    }
+}
+
+.landing-page .continar .most-publar .boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    opacity: 0;
+    transition: all 1s 3s ease-in-out;
+}
+
+.landing-page .continar .most-publar .boxes .box {
+    background-color: var(--main-color);
+    border-radius: 25px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.landing-page .continar .most-publar .boxes .box:hover {
+    transform: translateY(-10px);
+}
+
+.landing-page .continar .most-publar .boxes .box .photo img {
+    width: 186px;
+    height: 143px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.landing-page .continar .most-publar .boxes .box .rank {
+    display: flex;
+    justify-content: space-between;
+
+    b {
+        color: var(--white-color);
+        font-weight: bold;
+    }
+
+    p {
+        color: white;
+        font-size: 15px;
+    }
+
+    p i {
+        color: gold;
+        margin-right: 5px;
+    }
+}
+
+.landing-page .continar .most-publar .boxes .box .downloud {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+        color: #666;
+        font-size: 15px;
+    }
+
+    .dow {
+        color: white;
+    }
+
+    .dow i {
+        color: var(--secondry-color);
+        margin-right: 5px;
+    }
+}
+
+.landing-page .continar .most-publar .dic {
+    width: 95%;
+    height: auto;
+    position: absolute;
+    bottom: -20px;
+    text-align: center;
+}
+
+@media(max-width:768px) {
+    .landing-page .continar .most-publar .dic {
+        width: 80%;
+    }
+}
+
+.landing-page .continar .most-publar .dic button {
+    width: 185px;
+    height: 45px;
+    background-color: var(--secondry-color);
+    border: none;
+    outline: none;
+    border-radius: 25px;
+
+    a {
+        color: white;
+    }
+}
+
+.landing-page .continar .most-publar .dic button:hover {
+    background-color: #fff;
+
+    a {
+        color: var(--secondry-color);
+    }
+}
+
+/* End Boxes */
+/* Start library */
+.landing-page .continar .library {
+    background-color: var(--dar-color);
+    border-radius: 25px;
+    padding: 50px 30px;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.landing-page .continar .library .title {
+    overflow: hidden;
+}
+
+.landing-page .continar .library .title h1 {
+    margin-bottom: 30px;
+    color: var(--white-color);
+    font-size: 40px;
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: bold;
+    transform: translateX(-31rem);
+    transition: all 2s 0s ease-in-out;
+
+    span {
+        color: var(--secondry-color);
+    }
+}
+
+.landing-page .continar .library .tables {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.landing-page .continar .library .tables .table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    padding: 20px 0px;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.landing-page .continar .library .tables .table .imag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    img {
+        width: 90px;
+        height: 90px;
+        border-radius: 20px;
+    }
+}
+
+.landing-page .continar .library .tables .table .imag .text b {
+    color: white;
+    font-size: 15px;
+    background-color: transparent;
+}
+
+.landing-page .continar .library .tables .table .imag .text p {
+    color: #666;
+    margin-top: 10px;
+    font-size: 15px;
+    background-color: transparent;
+}
+
+.landing-page .continar .library .tables .table .data b {
+    font-size: 15px;
+    color: white;
+}
+
+.landing-page .continar .library .tables .table .data p {
+    font-size: 15px;
+    margin-top: 10px;
+    color: #666;
+}
+
+.landing-page .continar .library .tables .table .hours b {
+    font-size: 15px;
+    color: white;
+}
+
+.landing-page .continar .library .tables .table .hours p {
+    font-size: 15px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.landing-page .continar .library .tables .table .curntly b {
+    font-size: 15px;
+    color: white;
+}
+
+.landing-page .continar .library .tables .table .curntly p {
+    font-size: 15px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.landing-page .continar .library .tables .table .button button {
+    width: 155px;
+    height: 47px;
+    border-radius: 25px;
+    border: 1px solid var(--bac-color);
+    background-color: transparent;
+    cursor: pointer;
+
+    a {
+        color: var(--bac-color);
+        background-color: transparent;
+    }
+}
+
+.landing-page .continar .library .tables .table .button .active {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border: 1px solid var(--secondry-color);
+
+    a {
+        color: var(--secondry-color);
+    }
+}
+
+.landing-page .continar .library .tables .table .button .active:hover {
+    background-color: white;
+    border: none;
+}
+
+.landing-page .continar .dic {
+    width: 95%;
+    height: auto;
+    position: absolute;
+    bottom: -20px;
+    text-align: center;
+}
+
+@media(max-width:768px) {
+    .landing-page .continar .dic {
+        width: 80%;
+    }
+}
+
+.landing-page .continar .dic button {
+    width: 185px;
+    height: 45px;
+    background-color: var(--secondry-color);
+    border: none;
+    outline: none;
+    border-radius: 25px;
+
+    a {
+        color: white;
+    }
+}
+
+.landing-page .continar .dic button:hover {
+    background-color: #fff;
+
+    a {
+        color: var(--secondry-color);
+    }
+}
+
+/* End library */
+/* 
+--------------------
+End Landing
+--------------------
+*/
+/* Start Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0px;
+    opacity: 0;
+    transition: all 2s 0s ease-in-out;
+
+    p {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    b {
+        color: white;
+    }
+
+    b span {
+        color: var(--secondry-color);
+    }
+}
+
+/* End Footer */
+
+/* =============== Start Browse =============== */
+.Featured_Games {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Featured_Games .box-1 {
+    padding: 30px;
+    border-radius: 25px;
+    background-color: var(--dar-color);
+}
+
+.Featured_Games .box-1 .title h1 {
+    font-size: 40px;
+    color: var(--white-color);
+    margin: 0;
+    margin-bottom: 30px;
+
+    span {
+        color: var(--secondry-color);
+    }
+}
+
+.Featured_Games .box-1 .slide {
+    width: 500px;
+    height: auto;
+}
+
+/* =============== End Browse =============== */
